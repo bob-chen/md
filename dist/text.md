@@ -14,6 +14,8 @@ GitHub 地址：[https://github.com/bob-chen/md](https://github.com/bob-chen/md)
 用了 webpack 的 **TreeShaking** 特性，开心。
 
 
+JavaScript 代码：
+
 ```javascript
 	async loadInitMD(){
 		try {
@@ -26,7 +28,8 @@ GitHub 地址：[https://github.com/bob-chen/md](https://github.com/bob-chen/md)
 		  }
 	}
 ```
-***
+
+Python 代码：
 
 ```python
 print '人生苦短，我用 Python'
