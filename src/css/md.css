@@ -202,7 +202,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #c25;
     padding: 2px 3px;
     background-color: #f7f7f9;
-    border: 1px solid #e1e1e8;
+    /* border: 1px solid #e1e1e8; */
     border-radius: 3px;
   }
 
