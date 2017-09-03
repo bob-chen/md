@@ -1,0 +1,64 @@
+@import "../../sass/_reset";
+
+* {
+    box-sizing: border-box;
+}
+
+:global 
+.row {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 30px;
+
+    &:after {
+        clear: both;
+        content: "";
+        display: block;
+    }
+
+    .col {
+        float: left;
+        width: 50%;
+        padding: 0 15px;
+    }
+}
+
+.title {
+    height: 80px;
+    line-height: 80px;
+    font-size: 24px;
+    color: #0a95bf;
+}
+.editor {
+    width: 100%;
+    height: 600px;
+    padding: 10px;
+    overflow: auto;
+    border: none;
+    background-color: #333;
+    resize: none;
+    
+    color: #fff;
+}
+
+:global {
+
+.btn-wrapper {
+    height: 80px;
+    line-height: 80px;
+
+    button {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+.output {
+    background: #fff;
+    height: 100%;
+    min-height: 100%;
+    padding: 1em;
+    word-break: break-all;
+}
+
+
+}

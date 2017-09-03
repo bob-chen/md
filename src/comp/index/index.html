@@ -1,0 +1,23 @@
+  <div>
+    <div class="row">
+      <div class="col">
+          <div v-bind:class="Sytles.title">MD Converter</div>
+          <div class="editor-wrapper">
+            <textarea v-bind:class="Sytles.editor" id="editor" v-model="editorText" cols="100" rows="10" spellcheck="false" ></textarea>
+          </div>
+      </div>
+      <div class="col">
+        <div class="btn-wrapper">
+          <button-comp class="ui-btn-primary" id="copy-btn" data-clipboard-target="#output">复制</button-comp>
+        </div>  
+        <div class="output-wrapper">
+          <div class="output" id='output'>
+            <div v-html="textHtml"></div>
+          </div>
+        </div>
+      </div>
+    </div>    
+
+  </div>
+
+

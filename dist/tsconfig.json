@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    //语法编译为es5语法
+    "target": "es5",
+    //模块采用import语法且不作转换，转换工作交给gulp任务中的webpack3
+    "module": "es2015",
+    //用NPM模式加载
+    "moduleResolution": "node",
+    //对于没有Export的库进行兼容
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    //识别基本的系统类库
+    "lib": [
+      "dom",
+      "es5",
+      "es2015"
+    ],    
+    "baseUrl": ".",
+    "paths": {
+      // "lib/*": [
+      //   "./lib/*"
+      // ]
+    }
+  }
+}
