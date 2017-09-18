@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
 	//页面入口文件配置
@@ -36,32 +37,68 @@ module.exports = {
 			},
 			{
 				test: /\.scss$/,
-				use: [
-					{ 
+				use: ExtractTextPlugin.extract({
+					fallback: {
 						loader: 'style-loader',
 						options: {
 							insertAt: 'top'
 						}
 					},
-					{
-						loader: 'typings-for-css-modules-loader',
-						options: {
-						  modules: true,
-						  namedExport: true,
-						  camelCase: true,
-						  minimize: true,
-						  localIdentName: "[local]_[hash:base64:5]"
+					use: [
+						{
+							loader: 'typings-for-css-modules-loader',
+							options: {
+								modules: true,
+								namedExport: true,
+								camelCase: true,
+								minimize: true,
+								localIdentName: "[local]_[hash:base64:5]"
+							}
+						},
+						{
+							loader: 'sass-loader',
+							options: {
+								outputStyle: 'expanded',
+								sourceMap: true
+							}
 						}
-					},
-					{
-						loader: 'sass-loader',
-						options: {
-							outputStyle: 'expanded',
-							sourceMap: true
-						}
-					}					
-				]
+					]
+				})
+				// use: [
+				// 	{ 
+				// 		loader: 'style-loader',
+				// 		options: {
+				// 			insertAt: 'top'
+				// 		}
+				// 	},
+				// 	{
+				// 		loader: 'typings-for-css-modules-loader',
+				// 		options: {
+				// 		  modules: true,
+				// 		  namedExport: true,
+				// 		  camelCase: true,
+				// 		  minimize: true,
+				// 		  localIdentName: "[local]_[hash:base64:5]"
+				// 		}
+				// 	},
+				// 	{
+				// 		loader: 'sass-loader',
+				// 		options: {
+				// 			outputStyle: 'expanded',
+				// 			sourceMap: true
+				// 		}
+				// 	}					
+				// ]
 			},			
 		],
-	}	
+	},
+	plugins: [
+		new ExtractTextPlugin({
+			filename: (getPath) => {
+				return getPath('../css/[name].css').replace('css/js','css');
+			},
+			allChunks: true
+		}),
+	]
+
 };

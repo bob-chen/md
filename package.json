@@ -47,6 +47,7 @@
     "autoprefixer-loader": "^3.2.0",
     "css-loader": "^0.26.4",
     "dtsmake": "0.0.10",
+    "extract-text-webpack-plugin": "^2.1.2",
     "node-sass": "^4.5.3",
     "raw-loader": "^0.5.1",
     "sass-loader": "^6.0.6",
