@@ -3,6 +3,7 @@ A Markdown Editor for Wechat Public Platform
 
 体验地址：[http://md.imbeta.cn/](http://md.imbeta.cn/)
 
+它的由来：[写个小编辑器娱乐自己](https://mp.weixin.qq.com/s?__biz=MzI5NDE2NTY3NA==&mid=2247483856&idx=1&sn=e546458bce813ed44e808f8939bed23f&chksm=ec664c15db11c5031dda301abce816b35230bb3c796482ce06fc3f881740cc0e5f83d044e088#rd)
 
 主要使用的是 TypeScript + Vue，利用了 webpack 的 Tree Shaking 特性 ，用到几个开源库：
 
