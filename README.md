@@ -21,10 +21,15 @@ A Markdown Editor for Wechat Public Platform
 
 要了解 TypeScript + Vue 可以参考 https://www.qcloud.com/community/article/935663
 
+安装依赖：
+```bash
+npm install
+```
+
 编译命令：
 
 ```bash
-npm install && tsc -p src/tsconfig.json && gulp
+tsc -p src/tsconfig.json && gulp
 ```
 
 生成的文件在 `dist` 目录。
