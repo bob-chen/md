@@ -24,7 +24,7 @@ A Markdown Editor for Wechat Public Platform
 编译命令：
 
 ```bash
-tsc -p src/tsconfig.json && gulp
+npm install && tsc -p src/tsconfig.json && gulp
 ```
 
 生成的文件在 `dist` 目录。
