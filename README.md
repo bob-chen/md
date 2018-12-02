@@ -21,6 +21,11 @@ A Markdown Editor for Wechat Public Platform
 
 要了解 TypeScript + Vue 可以参考 https://www.qcloud.com/community/article/935663
 
+安装依赖：
+```bash
+npm install
+```
+
 编译命令：
 
 ```bash
